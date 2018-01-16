@@ -1,6 +1,6 @@
 {
   "name": "tracking-crop",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Crop image using tracking.js",
   "main": "index.js",
   "directories": {
