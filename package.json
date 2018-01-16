@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "tsc && npm run parcel",
-    "parcel": "parcel build test/index.html --out-dir docs",
+    "parcel": "parcel build test/index.html --out-dir docs --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "xcatliu <xcatliu@gmail.com>",
