@@ -1,0 +1,22 @@
+{
+  "name": "tracking-crop",
+  "version": "1.0.0",
+  "description": "Crop image using tracking.js",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tsc && npm run parcel",
+    "parcel": "parcel build test/index.html --out-dir docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xcatliu <xcatliu@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "tracking": "^1.1.3"
+  },
+  "devDependencies": {
+    "typescript": "^2.6.2"
+  }
+}
