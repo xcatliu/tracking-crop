@@ -10,13 +10,18 @@ export default function crop(imageElement: HTMLImageElement, options: ICropOptio
     const { width: imageWidth, height: imageHeight } = imageElement;
 
     const faceObjects = new tracking.ObjectTracker(['face']);
+
+    // 设置识别时候的缩放比例，设置越高越能提高效率，但是可能会降低准确率
+    faceObjects.setInitialScale(Math.min(imageWidth, imageHeight) / 100);
+
     faceObjects.on('track', (event) => {
         if (event.data.length === 0) {
             callback({
                 x: (imageWidth - cropWidth) / 2,
                 y: (imageHeight - cropHeight) / 2,
                 width: cropWidth,
-                height: cropHeight
+                height: cropHeight,
+                faces: []
             });
             return;
         }
@@ -25,7 +30,8 @@ export default function crop(imageElement: HTMLImageElement, options: ICropOptio
             x: faceX + faceWidth / 2 - cropWidth / 2,
             y: faceY + faceHeight / 2 - cropHeight / 2,
             width: cropWidth,
-            height: cropHeight
+            height: cropHeight,
+            faces: event.data
         };
         if (result.x < 0) {
             result.x = 0;
