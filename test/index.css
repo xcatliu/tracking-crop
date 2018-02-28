@@ -1,0 +1,9 @@
+#app {
+    width: 1000px;
+}
+.img-container {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    display: inline-block;    
+}

@@ -12,7 +12,7 @@ export default function crop(imageElement: HTMLImageElement, options: ICropOptio
     const faceObjects = new tracking.ObjectTracker(['face']);
 
     // 设置识别时候的缩放比例，设置越高越能提高效率，但是可能会降低准确率
-    faceObjects.setInitialScale(Math.min(imageWidth, imageHeight) / 100);
+    faceObjects.setInitialScale(Math.min(imageWidth, imageHeight) / 150);
 
     faceObjects.on('track', (event) => {
         if (event.data.length === 0) {
