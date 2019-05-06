@@ -1,5 +1,8 @@
 # Tracking Crop
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/xcatliu/tracking-crop.svg)](https://greenkeeper.io/)
+
+
 Crop image using tracking.js
 
 ## Usage
